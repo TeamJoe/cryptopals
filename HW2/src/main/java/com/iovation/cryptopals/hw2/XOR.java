@@ -8,7 +8,7 @@ public class XOR {
     public static byte[] xor(byte[] value, byte[] xor) {
         var result = new byte[value.length];
         for(int i = 0; i < value.length; i++) {
-            result[i] = (byte)(value[i] ^ xor[i]);
+            result[i] = (byte)(value[i] ^ xor[i % xor.length]);
         }
         return result;
     }
